@@ -50,7 +50,6 @@
         <a href="#presentations">Presentations</a>
         <a href="#publications">Publications</a>
         <a href="#skills">Skills</a>
-        <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -73,9 +72,12 @@
         <p class="muted">Finishing Ph.D. at Purdue (Chopra Lab). Co‑first author on CLAW‑MRM (Analytical Chemistry). Exploring industry roles in 2026 (analytical, computational, or AI‑enabled R&D).</p>
         <div style="display:grid; gap:8px; margin-top:8px">
           <div><strong>Email:</strong> <a href="mailto:SanjayIyer01@gmail.com">SanjayIyer01@gmail.com</a></div>
-          <div><strong>GitHub:</strong> <a href="https://github.com/Sanjay-Iyer" target="_blank" rel="noopener">github.com/Sanjay-Iyer</a></div>
-          <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sanjay-iyer-298566155/" target="_blank" rel="noopener">linkedin.com/in/sanjay-iyer-298566155</a></div>
-          <div><strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=a5-3pMgAAAAJ" target="_blank" rel="noopener">Google Scholar Profile</a></div>
+          <div style="display:flex; gap:16px; align-items:center; font-size:1.6em; margin-top:4px;">
+            <a href="https://github.com/Sanjay-Iyer" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sanjay-iyer-298566155/" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=a5-3pMgAAAAJ" target="_blank" rel="noopener" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+            <a href="https://x.com/SanjayScience" target="_blank" rel="noopener" title="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+          </div>
         </div>
       </div>
     </section>
@@ -84,6 +86,7 @@
       <h2>Selected Projects</h2>
       <div class="grid cols-2">
         <div class="card">
+          <img src="images/CLAWTOC.png" alt="CLAW-MRM Figure" style="width:100%;max-width:320px;display:block;margin:0 auto 12px auto;border-radius:10px;box-shadow:0 2px 8px #0003;"/>
           <h3>CLAW‑MRM</h3>
           <p class="muted">End‑to‑end automation for lipidomics MRM: worklist generation, QC agents, parsing, stats, and visualization.</p>
           <ul class="list">
@@ -97,6 +100,7 @@
         </div>
         
         <div class="card">
+          <img src="images/paddyTOC.png" alt="Paddy Figure" style="width:100%;max-width:320px;display:block;margin:0 auto 12px auto;border-radius:10px;box-shadow:0 2px 8px #0003;"/>
           <h3>Paddy: Automated Data Validation</h3>
           <p class="muted">Paddy is a versatile, biologically inspired evolutionary algorithm designed to efficiently optimize complex chemical systems while avoiding local minima.</p>
           <ul class="list">
@@ -188,5 +192,17 @@ For consulting or collaborations, include a brief summary and timeline.</p>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+<button id="backToTop" title="Back to top" style="display:none;position:fixed;bottom:32px;right:32px;z-index:999;background:var(--accent2);color:#fff;border:none;border-radius:50%;width:48px;height:48px;font-size:2em;box-shadow:0 2px 8px #0004;cursor:pointer;transition:background 0.2s;"></button>
+<script src="https://kit.fontawesome.com/7d1f4c3e4e.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css">
+<script>
+// Show/hide back to top button
+window.addEventListener('scroll', function() {
+  document.getElementById('backToTop').style.display = window.scrollY > 200 ? 'block' : 'none';
+});
+document.getElementById('backToTop').onclick = function() {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+};
+</script>
 </body>
 </html>
