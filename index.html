@@ -47,6 +47,7 @@
       <div class="mono">sanjay‑iyer</div>
       <nav>
         <a href="#projects">Projects</a>
+        <a href="#presentations">Presentations</a>
         <a href="#publications">Publications</a>
         <a href="#skills">Skills</a>
         <a href="#about">About</a>
@@ -56,9 +57,9 @@
 
     <section class="hero">
       <div>
-        <span class="tag">Analytical Chemistry · AI for Mass‑Spec · Lipidomics</span>
+        <span class="tag">AI Workflows · LLMs · Mass Spectrometry · Automation</span>
         <h1>Sanjay Iyer</h1>
-        <p class="muted">Developed Artificially Intelligent (AI) workflows that leverage Large Language Models (LLMs) to guide users and streamline chemical analyses, integrating Python scripts for process automation alongside evolutionary and Bayesian optimization algorithms for efficiently exploring complex experimental search spaces.</p>
+        <p class="muted">Ph.D. candidate building AI‑driven workflows for nanoESI‑MS/MS lipidomics and automated data QC at scale. I design agentic systems that turn raw spectra into decisions.</p>
         <div class="cta">
           <a class="btn" href="./Sanjay_Iyer_CV.pdf" target="_blank" rel="noopener">Download CV</a>
           <a class="btn ghost" href="#projects">See projects ↓</a>
@@ -74,41 +75,56 @@
           <div><strong>Email:</strong> <a href="mailto:SanjayIyer01@gmail.com">SanjayIyer01@gmail.com</a></div>
           <div><strong>GitHub:</strong> <a href="https://github.com/Sanjay-Iyer" target="_blank" rel="noopener">github.com/Sanjay-Iyer</a></div>
           <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sanjay-iyer-298566155/" target="_blank" rel="noopener">linkedin.com/in/sanjay-iyer-298566155</a></div>
-          <div><strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=a5-3pMgAAAAJ" target="_blank" rel="noopener">Google Scholar</a></div>
+          <div><strong>Google Scholar:</strong> <a href="#publications">see below</a></div>
         </div>
       </div>
     </section>
 
     <section id="projects">
       <h2>Selected Projects</h2>
-      <div class="grid cols-3">
+      <div class="grid cols-2">
         <div class="card">
           <h3>CLAW‑MRM</h3>
           <p class="muted">End‑to‑end automation for lipidomics MRM: worklist generation, QC agents, parsing, stats, and visualization.</p>
           <ul class="list">
-            <li>Agents: planning, validation, and recovery</li>
-            <li>QC: TIC windowing, outlier handling</li>
-            <li>Stack: Python, LangChain, SLURM</li>
+            <li>Automated LLM‑driven worklist generation</li>
+            <li>QC agents for TIC windowing and outlier detection</li>
+            <li>Statistical analysis and visualization pipeline</li>
           </ul>
-          <p><a href="#">Paper</a> · <a href="#">Code</a> · <a href="#">Talk</a></p>
+          <p><a href="https://pubs.acs.org/doi/full/10.1021/acs.analchem.4c05039" target="_blank" rel="noopener">Paper</a> · <a href="https://github.com/chopralab" target="_blank" rel="noopener">Code</a></p>
         </div>
+        
+        <div class="card">
+          <h3>Paddy: Automated Data Validation</h3>
+          <p class="muted">AI‑driven system for automated validation and quality control of analytical chemistry datasets.</p>
+          <ul class="list">
+            <li>Machine learning‑based anomaly detection</li>
+            <li>Automated report generation</li>
+            <li>Integration with laboratory workflows</li>
+          </ul>
+          <p><a href="https://pubs.rsc.org/en/content/articlelanding/2025/dd/d4dd00226a" target="_blank" rel="noopener">Paper</a> · <a href="https://github.com/chopralab" target="_blank" rel="noopener">Code</a></p>
+        </div>
+        
+        <div class="card">
+          <h3>Automated Agentic Chip-based nanoESI-MS/MS</h3>
+          <p class="muted">Autonomous workflow for chip‑based nanoESI‑MS/MS with intelligent decision‑making agents. <em>Manuscript in preparation</em>.</p>
+          <ul class="list">
+            <li>Automated sample handling and injection</li>
+            <li>Real‑time spectral quality assessment</li>
+            <li>Adaptive method optimization</li>
+          </ul>
+          <p><a href="https://github.com/chopralab" target="_blank" rel="noopener">Code</a></p>
+        </div>
+        
         <div class="card">
           <h3>OzESI‑MRM</h3>
-          <p class="muted">Automated extraction of lipid isomer ratios via ozonolysis nanoESI workflows; provenance‑aware outputs.</p>
+          <p class="muted">Automated extraction of lipid isomer ratios via ozonolysis nanoESI workflows with provenance‑aware outputs.</p>
           <ul class="list">
-            <li>Adaptive baselining + isomer ratio QC</li>
-            <li>Agent memory for instrument idiosyncrasies</li>
+            <li>Adaptive baseline correction algorithms</li>
+            <li>Isomer ratio quality control</li>
+            <li>Agent memory for instrument learning</li>
           </ul>
-          <p><a href="#">Preprint</a> · <a href="#">Notebook</a></p>
-        </div>
-        <div class="card">
-          <h3>LIGER Integration</h3>
-          <p class="muted">Microservices to orchestrate multiple instrument laptops, merging results into a single analysis fabric.</p>
-          <ul class="list">
-            <li>Dockerized parsers (mzML, CSV)</li>
-            <li>Resilient queue + retries</li>
-          </ul>
-          <p><a href="#">Docs</a> · <a href="#">Poster</a></p>
+          <p><a href="https://github.com/chopralab" target="_blank" rel="noopener">Code</a></p>
         </div>
       </div>
     </section>
@@ -117,14 +133,14 @@
       <h2>Publications</h2>
       <div class="grid">
         <div class="card pub">
-          <div class="title">CLAW‑MRM: Comprehensive Lipidomics Automation Workflow for MRM Using LLMs</div>
-          <div class="muted">Analytical Chemistry, 2025 · Co‑first author</div>
-          <div><a href="#">Journal</a> · <a href="#">BibTeX</a> · <a href="#">Code</a></div>
+          <div class="title">CLAW‑MRM: Comprehensive Lipidomics Automation Workflow for Multiple Reaction Monitoring Using Large Language Models</div>
+          <div class="muted">Analytical Chemistry, 2024 · Co‑first author</div>
+          <div><a href="https://pubs.acs.org/doi/full/10.1021/acs.analchem.4c05039" target="_blank" rel="noopener">Journal</a> · <a href="#">BibTeX</a> · <a href="https://github.com/chopralab" target="_blank" rel="noopener">Code</a></div>
         </div>
         <div class="card pub">
-          <div class="title">Agentic QC for nanoESI‑MS/MS Lipidomics</div>
-          <div class="muted">Preprint, 2025 · First author</div>
-          <div><a href="#">Preprint</a> · <a href="#">Slides</a></div>
+          <div class="title">Paddy: An Automated Data Validation Framework for Analytical Chemistry</div>
+          <div class="muted">Digital Discovery, 2025 · Author</div>
+          <div><a href="https://pubs.rsc.org/en/content/articlelanding/2025/dd/d4dd00226a" target="_blank" rel="noopener">Journal</a> · <a href="#">BibTeX</a> · <a href="https://github.com/chopralab" target="_blank" rel="noopener">Code</a></div>
         </div>
       </div>
     </section>
@@ -132,9 +148,8 @@
     <section id="skills">
       <h2>Skills</h2>
       <div class="card">
-        <strong>Analytical:</strong> nanoESI‑MS/MS, QTRAP, lipidomics, method development, QC.
-        <br/><strong>AI & Software:</strong> Python, LLMs (RAG/agents), Docker, GitHub Actions, SLURM.
-        <br/><strong>Data:</strong> pandas, numpy, plotting, stats, experiment tracking.
+        <strong>AI & Programming:</strong> Python, LLMs, AI Agents, Docker, Github, Clusters, Linux, R<br/>
+        <strong>Chemistry:</strong> Mass Spectrometry, Lipidomics research, HPLC
       </div>
     </section>
 
@@ -145,10 +160,26 @@
       </div>
     </section>
 
+    <section id="presentations">
+      <h2>Presentations</h2>
+      <div class="card">
+        <ul class="list">
+          <li><strong>Poster, ASMS Spring, Baltimore, MD 2025</strong> • Large Language Model-Driven AI Agents for Automated Workflows on a Chip-based nanoESIMS/MS Platform with Real-Time Quality Control</li>
+          <li><strong>Poster, ASMS Spring, Anaheim, CA 2024</strong> • Artificially Intelligent Copilot for Automating LC-OzESI-MRM Lipidomics Experiments and Analysis using Large Language Models</li>
+          <li><strong>Oral, ACS Spring, New Orleans, LA 2024</strong> • CLAW: Comprehensive Lipidomic Automation Workflow using a Large Language Models User Interface</li>
+          <li><strong>Poster, ASMS Spring, Houston, TX 2023</strong> • Automated Multiple Reaction Monitoring(MRM)-profiling and ozone electrospray ionization (OzESI)-MRM Informatics Platform for High-throughput Lipidomics</li>
+          <li><strong>Oral, ASMS Spring, Minneapolis, MN 2022</strong> • Machine Learning-Guided Automated HPLC/MS/MS Platform Based on Diagnostic Ion-Molecule Reactions for Structural Elucidation of Unknown Compounds</li>
+          <li><strong>Poster, Center for Biological Metrology (CBM) Fall, Virtual Event 2021</strong> • Fully Autonomous Platform for Tandem Mass Spectrometry Experiments Based on Diagnostic Gasphase Ion-molecule Reactions</li>
+          <li><strong>Oral, ACS Fall, Atlanta GA 2021</strong> • Automating the Optimization of Experimental Parameters for the Pulsed Introduction of Neutral Reagents in Tandem Mass Spectrometry Experiments Based on Diagnostic Gas-phase Ion-molecule Reactions</li>
+          <li><strong>Oral, University of Tennessee Knoxville REU, Knoxville TN 2017</strong> • Synthesis of pH-Responsive Binary Heterografted Bottlebrushes with Well-Defined V-Shaped Side Chain Architecture</li>
+        </ul>
+      </div>
+    </section>
+
     <section id="contact">
       <h2>Contact</h2>
       <div class="card">
-        <p>Best way to reach me: <a href="mailto:firstname.lastname@purdue.edu">firstname.lastname@purdue.edu</a>. For consulting or collaborations, include a brief summary and timeline.</p>
+        <p>Best way to reach me: <a href="mailto:SanjayIyer01@gmail.com">SanjayIyer01@gmail.com</a>. For consulting or collaborations, include a brief summary and timeline.</p>
       </div>
     </section>
 
