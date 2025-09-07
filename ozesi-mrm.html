@@ -7,23 +7,63 @@
   <meta name="description" content="OzESI‑MRM: AI-powered LC-OzESI-MRM for isomer-specific fatty acid profiling" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css">
   <script src="https://kit.fontawesome.com/7d1f4c3e4e.js" crossorigin="anonymous"></script>
-  <style>body{margin:0;padding:0;background:#0b0f14;color:#e7eef6;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji";}.wrap{max-width:900px;margin:40px auto;padding:32px;background:#101721;border-radius:18px;box-shadow:0 2px 12px #0004;}h1{font-size:2.3em;margin-bottom:0.2em}.muted{color:#9fb0c3}.card{background:#111a24;border-radius:14px;padding:22px 26px;margin-top:18px;box-shadow:0 2px 8px #0002;}img{width:100%;max-width:180px;display:inline-block;margin:0 10px 12px 0;border-radius:10px;box-shadow:0 2px 8px #0003;}ul.list{display:grid;gap:12px;padding-left:20px;}a{color:#74b9ff;text-decoration:none} a:hover{text-decoration:underline}.btn-main{display:inline-block;background:#59d185;color:#0b0f14;padding:10px 20px;border-radius:10px;font-weight:700;text-decoration:none;margin-top:24px;}</style>
+  <style>
+  body{margin:0;padding:0;background:#0b0f14;color:#e7eef6;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji";}
+  .wrap{max-width:900px;margin:40px auto;padding:32px;background:#101721;border-radius:18px;box-shadow:0 2px 12px #0004;}
+  h1{font-size:2.3em;margin-bottom:0.2em}
+  .muted{color:#9fb0c3}
+  .card{background:#111a24;border-radius:14px;padding:22px 26px;margin-top:18px;box-shadow:0 2px 8px #0002;}
+  img.thumb{
+    width:100%;
+    max-width:180px;
+    display:inline-block;
+    margin:0 10px 12px 0;
+    border-radius:10px;
+    box-shadow:0 2px 8px #0003;
+  }
+  figure.fig {
+    margin: 28px 0;
+    padding: 16px;
+    background: #111a24;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px #0002;
+  }
+  figure.fig img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #0003;
+  }
+  figure.fig figcaption {
+    margin-top: 10px;
+    font-size: 1rem;
+    line-height: 1.55;
+    color: #9fb0c3;
+  }
+  figure.fig figcaption b { color:#e7eef6; }
+  ul.list{display:grid;gap:12px;padding-left:20px;}
+  a{color:#74b9ff;text-decoration:none} a:hover{text-decoration:underline}
+  .btn-main{display:inline-block;background:#59d185;color:#0b0f14;padding:10px 20px;border-radius:10px;font-weight:700;text-decoration:none;margin-top:24px;}
+</style>
 </head>
 <body>
   <div class="wrap">
     <h1>OzESI‑MRM</h1>
-    <div style="margin-bottom:24px;text-align:center;">
-  <img src="images/canola/CanolaFig1.jpg" alt="OzESI-MRM Figure 1" style="width:100%;max-width:420px;border-radius:10px;box-shadow:0 2px 8px #0003;"/>
-  <div style="margin-top:8px;font-size:1em;color:#9fb0c3;"><strong>Figure 1.</strong> LC-OzESI-MRM platform and instrument modifications for double bond localization. (a) Schematic overview of TG separation, in-source ozonolysis, and automated analysis via CLAW-OzESI-MRM. (b) Diagram of ozone and nitrogen gas routing to the Agilent Jet Stream (AJS) ESI source on a 6495C QqQ mass spectrometer. A T-junction with ball valves enables manual switching between in-house N₂ and O₃/O₂ gas from an ozone generator, with safety monitoring by an ambient ozone sensor. (c) Photograph of the modified source with labeled components (T-junction, gas lines, and nebulizer).</div>
-</div>
-<div style="margin-bottom:24px;text-align:center;">
-  <img src="images/canola/canola figure3.jpg" alt="OzESI-MRM Figure 3" style="width:100%;max-width:420px;border-radius:10px;box-shadow:0 2px 8px #0003;"/>
-  <div style="margin-top:8px;font-size:1em;color:#9fb0c3;"><strong>Figure 3.</strong> Workflow for C=C double bond localization in MUFA-containing TGs using the CLAW-OzESI-MRM pipeline. (a) The user defines targeted double bond positions (e.g., n-7, n-9) for a given TG species (e.g., TG 54:4_FA 18:1). (b) The software automatically predicts OzESI-MRM transitions for each specified double bond position by calculating expected precursor-product ion pairs based on neutral losses. (c) LC-OzESI-MRM data acquired with (OzON) and without (OzOFF) ozone are parsed into structured pandas DataFrames. (d) Retention time (RT) windows are defined and used for peak picking and matching. (e) Retention time alignment between OzOFF and OzON runs validates true C=C-specific MRM transitions and distinguishes them from overlapping signals or artifacts. (f) Quantitative outputs are visualized for downstream analysis.</div>
-</div>
-<div style="margin-bottom:24px;text-align:center;">
-  <img src="images/canola/canola figure 5.jpg" alt="OzESI-MRM Figure 5" style="width:100%;max-width:420px;border-radius:10px;box-shadow:0 2px 8px #0003;"/>
-  <div style="margin-top:8px;font-size:1em;color:#9fb0c3;"><strong>Figure 5.</strong> n-9/n-7 isomer peak area ratios for FA 18:1-containing triacylglycerols (TGs) in crude (blue), degummed (orange), and refined-bleached-deodorized (RBD, green) canola oil. (a) Ratios based on LC-MS peak area; (b) ratios based on maximum MRM intensity. The n-9 isomer predominated across all TGs and stages, indicating that industrial processing preserves C=C positional distributions.</div>
-</div>
+    <figure class="fig" id="fig-1" role="group" aria-labelledby="cap-1">
+  <img src="images/canola/CanolaFig1.jpg" alt="LC-OzESI-MRM platform and AJS source gas-routing modifications" loading="lazy" decoding="async">
+  <figcaption id="cap-1"><b>Figure 1.</b> LC-OzESI-MRM platform and instrument modifications for double bond localization. (a) Schematic overview of TG separation, in-source ozonolysis, and automated analysis via CLAW-OzESI-MRM. (b) Diagram of ozone and nitrogen gas routing to the Agilent Jet Stream (AJS) ESI source on a 6495C QqQ mass spectrometer. A T-junction with ball valves enables manual switching between in-house N₂ and O₃/O₂ gas from an ozone generator, with safety monitoring by an ambient ozone sensor. (c) Photograph of the modified source with labeled components (T-junction, gas lines, and nebulizer).</figcaption>
+</figure>
+<figure class="fig" id="fig-3" role="group" aria-labelledby="cap-3">
+  <img src="images/canola/canola%20figure3.jpg" alt="Workflow for C=C localization in MUFA TGs using CLAW-OzESI-MRM" loading="lazy" decoding="async">
+  <figcaption id="cap-3"><b>Figure 3.</b> Workflow for C=C double bond localization in MUFA-containing TGs using the CLAW-OzESI-MRM pipeline. (a) The user defines targeted double bond positions (e.g., n-7, n-9) for a given TG species (e.g., TG 54:4_FA 18:1). (b) The software automatically predicts OzESI-MRM transitions for each specified double bond position by calculating expected precursor-product ion pairs based on neutral losses. (c) LC-OzESI-MRM data acquired with (OzON) and without (OzOFF) ozone are parsed into structured pandas DataFrames. (d) Retention time (RT) windows are defined and used for peak picking and matching. (e) RT alignment between OzOFF and OzON runs validates true C=C-specific MRM transitions and distinguishes them from overlapping signals or artifacts. (f) Quantitative outputs are visualized for downstream analysis.</figcaption>
+</figure>
+<figure class="fig" id="fig-5" role="group" aria-labelledby="cap-5">
+  <img src="images/canola/canola%20figure%205.jpg" alt="n-9/n-7 isomer peak area ratios across canola oil processing stages" loading="lazy" decoding="async">
+  <figcaption id="cap-5"><b>Figure 5.</b> n-9/n-7 isomer peak area ratios for FA 18:1-containing triacylglycerols (TGs) in crude (blue), degummed (orange), and refined-bleached-deodorized (RBD, green) canola oil. (a) Ratios based on LC-MS peak area; (b) ratios based on maximum MRM intensity. The n-9 isomer predominated across all TGs and stages, indicating that industrial processing preserves C=C positional distributions.</figcaption>
+</figure>
+
     <div class="card">
       <p class="muted">AI-powered LC-OzESI-MRM enables rapid, accessible, and isomer-specific fatty acid profiling to drive biomarker discovery and precision lipidomics.</p>
       <ul class="list">
